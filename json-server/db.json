@@ -2,123 +2,39 @@
   "users": [
     {
       "id": "1",
-      "name": "Bruno Hauck",
-      "email": "brunohauck@gmail.com",
-      "phone": "1234567890",
-      "cpf": "49224951007",
-      "password": "123456"
+      "name": "ALEXIA DE OLIVEIRA SANTOS DE SOUSA",
+      "phone": "62991000282",
+      "email": "alexiamma@hotmail.com",
+      "cpf": "05283765199",
+      "dataNascimento": "1994-10-11T03:00:00.000Z",
+      "password": "sadasd"
     },
     {
       "id": "2",
-      "name": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "20015451003",
-      "password": "fdsfds"
+      "name": "ALEXIA DE OLIVEIRA SANTOS DE SOUSA2",
+      "phone": "62991000282",
+      "email": "alexiamma@hotmail.com",
+      "cpf": "05283765199",
+      "dataNascimento": "1994-10-11T03:00:00.000Z",
+      "password": "sadasd"
     },
     {
       "id": "3",
-      "name": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "84114809090",
-      "password": "fdsfds"
-    },
-    {
-      "id": "4",
-      "name": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "71045552003",
-      "password": "fdsfds"
-    },
-    {
-      "id": "5",
-      "firstName": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "05126769685",
-      "password": "fdsfds"
-    },
-    {
-      "id": "6",
-      "firstName": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "05126769685",
-      "password": "fdsfds"
-    },
-    {
-      "id": "7",
-      "firstName": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "05126769685",
-      "password": "fdsfds"
-    },
-    {
-      "id": "8",
-      "firstName": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "05126769685",
-      "password": "fdsfds"
-    },
-    {
-      "id": "9",
-      "firstName": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "05126769685",
-      "password": "fdsfds"
-    },
-    {
-      "id": "10",
-      "firstName": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "05126769685",
-      "password": "fdsfds"
-    },
-    {
-      "id": "11",
-      "firstName": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "05126769685",
-      "password": "fdsfds"
-    },
-    {
-      "id": "12",
-      "firstName": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "05126769685",
-      "password": "fdsfds"
-    },
-    {
-      "id": "13",
-      "firstName": "Bruno",
-      "email": "brunohauck@gmail.com",
-      "phone": "323",
-      "cpf": "05126769685",
-      "password": "fdsfds"
+      "name": "ALEXIA DE OLIVEIRA SANTOS DE SOUSA3",
+      "phone": "62991000282",
+      "email": "alexiamma@hotmail.com",
+      "cpf": "05283765199",
+      "dataNascimento": "1994-10-11T03:00:00.000Z",
+      "password": "sadasd"
     },
     {
       "id": "1",
-      "name": "alexia",
-      "phone": "62991000282",
-      "email": "alexiaosato2@dksmv.com",
+      "name": "retetrete",
+      "phone": "44444444444",
+      "email": "ertertre@qwqwqq",
       "cpf": "05283765199",
-      "password": "Alexiaueg.21"
-    },
-    {
-      "id": "1",
-      "name": "cvxcvx",
-      "phone": "62991000282",
-      "email": "QQQ@sad.cls",
-      "cpf": "05283765199",
-      "password": "sjmjkamcddfsd"
+      "dataNascimento": "1994-11-17T02:00:00.000Z",
+      "password": "sdwdwdwd"
     }
   ]
 }

@@ -4,16 +4,17 @@ import { GenericValidator } from 'src/app/comum/validador';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 
+
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent {
+
   user: User = new User();
-  private fb = inject(FormBuilder);
   addressForm = this.fb.group({
-    id: this.user.id,
+
     name: [null, Validators.compose([
       Validators.required, Validators.minLength(3), Validators.maxLength(70)])
     ],
@@ -24,11 +25,14 @@ export class CadastroComponent {
       Validators.required, GenericValidator.isValidCpf()])
     ],
     phone: [null, Validators.required],
+    dataNascimento: [null, Validators.required],
     password: [null, Validators.required],
   });
 
   email = this.addressForm.controls['email'];
-  constructor(private service: UserService) { }
+
+  constructor(private fb: FormBuilder, private service: UserService) {
+  }
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'O email é obrigatório';
@@ -36,8 +40,8 @@ export class CadastroComponent {
     return this.email.hasError('email') ? 'Você deve preencher um valor para o email válido' : '';
   }
 
+
   onSubmit(): void {
-    this.user.id = '1';
     if (this.addressForm.controls['name'].value) {
       this.user.name = this.addressForm.controls['name'].value;
     }
@@ -50,6 +54,9 @@ export class CadastroComponent {
     }
     if (this.addressForm.controls['cpf'].value) {
       this.user.cpf = this.addressForm.controls['cpf'].value;
+    }
+    if (this.addressForm.controls['dataNascimento'].value) {
+      this.user.dataNascimento = this.addressForm.controls['dataNascimento'].value;
     }
     if (this.addressForm.controls['password'].value) {
       this.user.password = this.addressForm.controls['password'].value;

@@ -32,7 +32,17 @@ import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.compo
 import { EditarComponent } from './pages/editar/editar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-mask';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { UserService } from './services/user.service';
+import { DialogContentExampleDialog, ModalComponent } from './pages/modal/modal.component';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -51,15 +61,21 @@ import { UserService } from './services/user.service';
     PrivadoComponent,
     DetalheComponent,
     ListaSimplesComponent,
-    EditarComponent
+    EditarComponent,
+    ModalComponent,
+    DialogContentExampleDialog
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule,
     MatButtonModule,
     MatSelectModule,
+    MatBottomSheetModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatTooltipModule,
     MatRadioModule,
     MatFormFieldModule,
     MatCardModule,
@@ -71,8 +87,15 @@ import { UserService } from './services/user.service';
     MatIconModule,
     MatListModule,
     NgxMaskDirective,
-    NgxMaskPipe
+    NgxMaskPipe,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
+
   providers: [
     provideEnvironmentNgxMask(), UserService
   ],

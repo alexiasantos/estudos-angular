@@ -47,6 +47,18 @@
       </div>
       <div class="row">
         <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dataNascimento">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Senha" type="password" formControlName="password">
             <mat-error *ngIf="addressForm.controls['password'].hasError('required')">
