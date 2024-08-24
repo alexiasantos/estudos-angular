@@ -1,5 +1,5 @@
 <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
-  <mat-card class="shipping-card">
+  <mat-card class="shipping-card formCadastro">
     <mat-card-header>
       <mat-card-title>Cadastro</mat-card-title>
     </mat-card-header>
@@ -7,17 +7,17 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="First name" formControlName="firstName">
-            <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+            <input matInput placeholder="name" formControlName="name">
+            <mat-error *ngIf="addressForm.controls['name'].hasError('required')">
               Nome é <strong>Obrigatório</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="E-mail" formControlName="email">
-            <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
-              E-mail é <strong>Obrigatório</strong>
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-error *ngIf="email.invalid">
+              {{getErrorMessage}}
             </mat-error>
           </mat-form-field>
         </div>
@@ -25,9 +25,22 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <textarea matInput placeholder="Telefone" formControlName="phone"></textarea>
+            <input type="tel" matInput placeholder="Telefone" mask="(00) 0000-00000" formControlName="phone">
             <mat-error *ngIf="addressForm.controls['phone'].hasError('required')">
               Telefone é <strong>Obrigatório</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input type="CPF" matInput placeholder="cpf" mask="000.000.000-00" formControlName="cpf">
+            <mat-error *ngIf="addressForm.controls['cpf'].hasError('required')">
+              CPF é <strong>Obrigatório</strong>
+            </mat-error>
+            <mat-error *ngIf="addressForm.controls['cpf'].getError('cpfNotValid')">
+              CPF não é <strong>válido</strong>
             </mat-error>
           </mat-form-field>
         </div>
@@ -44,7 +57,7 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+      <button mat-raised-button color="primary" [disabled]="!addressForm.valid" type="submit">Cadastrar</button>
     </mat-card-actions>
   </mat-card>
 </form>

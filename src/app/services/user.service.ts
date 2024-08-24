@@ -24,12 +24,12 @@ export class UserService {
   }
   editUser(user: any): Observable<User> {
     console.log(user);
-    let url: string = this.BASE_URL + '/users/' + user.id;
+    let url: string = this.BASE_URL + '/users' + user.id;
     return this.http.put<User>(url, user, httpOptions);
 
   }
   deleteUser(user: any): Observable<User> {
-    let url: string = this.BASE_URL + '/users/' + user.id;
+    let url: string = this.BASE_URL + '/users' + user.id;
     return this.http.delete<User>(url, httpOptions);
   }
 

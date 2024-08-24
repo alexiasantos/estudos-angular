@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -14,7 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, Validators } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './pages/main/main.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -30,6 +29,10 @@ import { Page2Component } from './pages/sub-route/page2/page2.component';
 import { PrivadoComponent } from './pages/privado/privado.component';
 import { DetalheComponent } from './pages/detalhe/detalhe.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
+import { EditarComponent } from './pages/editar/editar.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-mask';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,8 @@ import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.compo
     Page2Component,
     PrivadoComponent,
     DetalheComponent,
-    ListaSimplesComponent
+    ListaSimplesComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +61,7 @@ import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.compo
     MatButtonModule,
     MatSelectModule,
     MatRadioModule,
+    MatFormFieldModule,
     MatCardModule,
     ReactiveFormsModule,
     LayoutModule,
@@ -64,9 +69,13 @@ import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.compo
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
-  providers: [],
+  providers: [
+    provideEnvironmentNgxMask(), UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
